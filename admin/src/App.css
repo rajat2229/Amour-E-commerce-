@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #724b50;
+  --primary-color-hover: #724b50e9;
+  --primary-font: "Abhaya Libre", serif;
+  --secondary-font: "DM Sans", sans-serif;
+  --background-primary: #eccece;
+  --background-secondary: #724b50;
+  --background-tertiary: #feafaf;
+  --white: #ffffff;
+  --border-primary: #eccece;
+  --border-secondary: #724b50;
+  --black: #000;
+  --box-shadow: rgba(0, 0, 0, 0.2);
+  --background-linear: linear-gradient(180deg, #ffffff 0%, #eccece 100%);
+  --navbarHeight: 4.5rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.checkout-div-scroll::-webkit-scrollbar {
+  display: none;
+}
+.orderDetail::-webkit-scrollbar{
+  display: none;
+}
+
+/* Table in dashWishlist css  */
+
+.wish-div::-webkit-scrollbar {
+  display: none;
+}
+.wish-table {
+  font-family: var(--primary-font);
+  border-collapse: collapse;
+  width: 100%;
+}
+.wish-table thead {
+  border-bottom: 1px solid var(--border-primary);
+  border-top: 1px solid var(--border-primary);
+}
+.wish-table thead tr th {
+  /* background-color: red; */
+  padding: 25px 50px;
+}
+.wish-table tbody tr {
+  border-bottom: 1px solid var(--border-primary);
+}
+.wish-table tbody tr td {
+  padding: 20px 0;
+}
+
+.star-shadow {
+  text-shadow: 2px 1px 0 var(--background-primary),
+    -2px -1px 0 var(--background-primary), 2px -1px 0 var(--background-primary),
+    -2px 1px 0 var(--background-primary), 2px 1px 0 var(--background-primary);
+}
+
+::-moz-selection,
+::selection {
+  color: white;
+  background: var(--primary-color);
+}
+
+/* carousel  */
+
+.react-multiple-carousel__arrow {
+  z-index: 10 !important;
+}
+
+
+
+.textArea{
+  border: 1.5px solid #a2a2a2;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+
+}
+.textArea:hover{
+  border-color: black;
+}
+.textArea:focus{
+  border-color: #1976d2;
+}
+.textArea::placeholder{
+  font-size: 17px;
+  font-family: 'Nunito',sans-serif;
+  color:#a2a2a2
+}

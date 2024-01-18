@@ -1,0 +1,39 @@
+
+
+/* .am-heroText{
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+} */
+.am-heading{
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+}
+
+/* .am-westText{
+  font-size: 8rem;
+  font-weight: 700;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+} */
+.am-descText{
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+.am-text{
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+.am-navText{
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}

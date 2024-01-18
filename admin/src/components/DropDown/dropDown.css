@@ -1,0 +1,157 @@
+.dropdown {
+  position: relative;
+  /* margin-top: 100px; */
+  width: 100%;
+  height: 50px;
+}
+.dropdown:hover{
+  border-color: black;
+}
+.dropdown::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 22px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 25px;
+  transform: rotate(-225deg);
+}
+
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 80%; */
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-family: 'Nunito',sans-serif;
+  font-size: 16px;
+}
+.dropdown input:hover{
+  border-color: black;
+}
+.dropdown input:focus{
+  border-color: #1976d2;
+}
+.dropdown .option {
+  position: absolute;
+  z-index: 1000;
+  top: 70px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  height: 200px;
+  overflow-y: scroll;
+}   
+.dropdown.active .option{
+  display: block;
+  z-index: 1000;
+}
+.dropdown .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown .option div:hover {
+  background-color: #724b50;
+  color: white;
+}
+
+
+/* side bar drop down css  */
+
+.side-drop {
+  position: relative;
+  margin-left: -10px;
+  padding-left: 0;
+  align-self: center;
+  width: 80%;
+  height: 50px;
+}
+.side-drop:hover{
+  border-color: black;
+}
+.side-drop::before {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: 15px;
+  z-index: 10;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #e2e2e2;
+  border-right: 2px solid #e2e2e2;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.side-drop.active::before {
+  top: 20px;
+  transform: rotate(-225deg);
+}
+
+.side-drop input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid #e2e2e2;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.side-drop input:hover{
+  border-color: black;
+}
+.side-drop input:focus{
+  border-color: #1976d2;
+}
+.side-drop .option {
+  position: absolute;
+  z-index: 1000;
+  top: 60px;
+  width: 120%;
+  background-color: #e2e2e2;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  min-height: 100px;
+  overflow-y: scroll;
+}   
+.side-drop.active .option{
+  display: block;
+}
+.side-drop .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.side-drop .option div:hover {
+  background-color: #724b50;
+  color: white;
+}
