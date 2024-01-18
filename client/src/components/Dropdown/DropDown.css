@@ -1,0 +1,81 @@
+/* .dropdown {
+  position: relative;
+  min-width: 10%;
+  height: 6rem;
+  border-radius: 40px;
+}
+.dropdown:hover{
+  border-color: black;
+}
+.dropdown::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 27px;
+  z-index: 1000;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #333;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.dropdown.active::before {
+  top: 25px;
+  transform: rotate(-225deg);
+}
+.option::-webkit-scrollbar{
+  display: none;
+}
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  cursor: pointer;
+  background-color: var(--background-secondary);
+  border: 1px solid #e2e2e2;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-family: 'Nunito',sans-serif;
+  color:white;
+  font-size: 16px;
+}
+.dropdown input:hover{
+  border-color: black;
+}
+.dropdown input:focus{
+  border-color: #1976d2;
+}
+.dropdown .option {
+  position: absolute;
+  z-index: 1000;
+  top: 65px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  height: 200px;
+  overflow-y: scroll;
+}   
+.dropdown.active .option{
+  display: block;
+  z-index: 1000;
+}
+.dropdown .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.dropdown .option div:hover {
+  background-color: var(--background-primary);
+  color: white;
+}
+ */

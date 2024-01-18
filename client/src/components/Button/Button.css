@@ -1,0 +1,17 @@
+.am-button {
+  transition: all 0.15s linear;
+  background-color: blue;
+}
+.am-btnText {
+  font-size: 1.5rem;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: #ffffff;
+}
+.am-button:hover {
+  background-color: var(--primary-color-hover);
+}
+.am-button:hover .am-btnText{
+  background-color: var(--primary-color-hover);
+  color: white;
+}

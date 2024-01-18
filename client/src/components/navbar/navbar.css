@@ -1,0 +1,203 @@
+header {
+  height: var(--navbarHeight);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38%;
+}
+
+header div:first-child {
+  justify-content: flex-start;
+}
+
+header div:nth-child(2) {
+  width: 24%;
+}
+
+header div:nth-child(2) .logo {
+  height: 70px;
+}
+
+header div:last-child {
+  justify-content: flex-end;
+}
+
+header div:last-child div {
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+header div:last-child img {
+  @apply h-5 md:h-auto;
+}
+
+#hamBurger {
+  height: 30px;
+  width: 36px;
+  transition: all 250ms ease-in-out;
+}
+
+#hamBurger::before,
+#hamBurger::after {
+  content: " ";
+  background-color: var(--primary-color);
+  height: 2px;
+  width: 24px;
+  position: absolute;
+  transition: all 250ms ease-in-out;
+}
+
+#hamBurger:hover:before,
+#hamBurger:hover:after {
+  background-color: var(--primary-color-hover);
+}
+
+#hamBurger::before {
+  transform: translateY(-8px) translateX(-12px);
+}
+
+#hamBurger::after {
+  transform: translateY(6px) translateX(-12px);
+}
+
+#hamBurger.active::before {
+  transform: rotate(45deg) translateY(8px) translateX(-10px);
+}
+
+#hamBurger.active::after {
+  transform: rotate(-45deg) translateY(-10px) translateX(-8px);
+}
+
+nav#navLinks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  /* backdrop-filter: blur(6px) brightness(50%); */
+  z-index: 100;
+  height: calc(100vh);
+  width: 80vw;
+  transform: translateX(-80vw);
+  /* overflow: hidden; */
+  transition: all 0.4s ease-in-out;
+}
+@media (min-width: 768px) {
+  nav#navLinks {
+    transform: translateX(0);
+  }
+}
+nav#navLinks.active {
+  transform: translateX(0);
+  overflow-y: visible;
+}
+nav#navLinks.active ul {
+  padding: 0 2rem;
+}
+nav#navLinks ul li a {
+  padding: 1em 0;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+nav#navLinks ul li a:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-top: 2rem;
+  }
+
+  header div:first-child {
+    justify-content: center;
+  }
+
+  #hamBurger {
+    display: none;
+  }
+
+  header div:nth-child(2) .logo {
+    height: 90px;
+  }
+
+  nav#navLinks {
+    width: 100%;
+    position: unset;
+    padding: 0;
+    height: var(--navbarHeight);
+    backdrop-filter: unset;
+    background-color: transparent;
+  }
+
+  nav#navLinks ul {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+    color: var(--primary-color);
+  }
+
+  nav#navLinks ul li {
+    width: auto;
+    border-bottom: none;
+  }
+
+  nav#navLinks ul li a {
+    padding: 0;
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+
+  nav#navLinks ul li a:hover {
+    opacity: 0.7;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  nav#navLinks > ul {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.side-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255, 0.6);
+  filter: blur(100px);
+  height: 100vh;
+  width: 100vw;
+}
+
+.menubar{
+  transform: translateX(-100vw);
+  z-index: 100;
+  transition: all 0.4s linear;
+}
+
+.menubar.active{
+  transform: translateX(0); 
+}
+
+
+  /* display: block;
+  position: absolute;
+  background-color: white;
+  z-index: 10000;
+  margin-top: 70px;
+  margin-left: -10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
